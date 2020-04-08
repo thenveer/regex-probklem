@@ -5,10 +5,7 @@ def function(files):
     count=0
     for line in open(files ,'r'):
         count+=1
-        #print (count)   
         line=line.strip()
-        #if not line.startswith('#'):
-        #print(line)
         r1=re.compile('^.*error.*$|^.*Error.*$')
         
         if r1.match(line):
